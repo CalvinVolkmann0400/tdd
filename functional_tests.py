@@ -1,7 +1,7 @@
-from selenuim import webdriver
-import unitest
+from selenium import webdriver
+import unittest
 
-class NewVisitorTest(unitest.TestCase):
+class NewVisitorTest(unittest.TestCase):
     def setUp(self):
         self.browser = webdriver.Firefox()
 
@@ -12,7 +12,7 @@ class NewVisitorTest(unitest.TestCase):
         #can open website
         self.browser.get("http://localhost:8000")
         #sees title & header with to-do list
-        self.assertIn
+        self.assertIn("To-Do", self.browser.title)
         #sees textbox to enter to-do
 
         #enter to-do
@@ -26,13 +26,5 @@ class NewVisitorTest(unitest.TestCase):
 
 
 
-if__name__ == '__main__':
-    main()
-
-
-
-
-browser = webdriver.Firefox()
-browser.get('http://localhost:8000')
-assert 'Congratulations' in browser.title
-print("OK")
+if __name__ == '__main__':
+    unittest.main()
